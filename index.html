@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html class="dark" lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>VANTAGE X1 | Performance Sem Limites</title>
+  <meta name="description" content="VANTAGE X1 — Sua saúde, produtividade e estilo em um só lugar. O smartwatch original feito para quem valoriza o autêntico." />
+
+  <!-- Tailwind CSS (CDN) -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+  <!-- Tailwind Config: Obsidian Pulse Design System -->
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "outline-variant": "#46464a",
+            "on-tertiary": "#2f3131",
+            "surface-container-high": "#2a2a2c",
+            "on-primary-fixed": "#1c1b1c",
+            "secondary-fixed": "#dae1ff",
+            "primary-fixed": "#e5e2e3",
+            "on-surface": "#e4e2e4",
+            "on-surface-variant": "#c7c6ca",
+            "secondary-fixed-dim": "#b3c5ff",
+            "inverse-primary": "#5f5e5f",
+            "surface-tint": "#c8c6c7",
+            "error-container": "#93000a",
+            "on-error-container": "#ffdad6",
+            "tertiary-fixed-dim": "#c6c6c7",
+            "on-primary": "#313031",
+            "background": "#0a0a0b",
+            "on-secondary-fixed": "#001849",
+            "secondary-container": "#0266ff",
+            "tertiary-container": "#090b0b",
+            "inverse-on-surface": "#303032",
+            "surface-container": "#121214",
+            "primary-container": "#0a0a0b",
+            "on-tertiary-fixed-variant": "#454747",
+            "on-secondary-container": "#f9f7ff",
+            "outline": "#919094",
+            "surface-dim": "#08080a",
+            "secondary": "#b3c5ff",
+            "on-error": "#690005",
+            "primary-fixed-dim": "#c8c6c7",
+            "on-tertiary-fixed": "#1a1c1c",
+            "primary": "#c8c6c7",
+            "surface-container-lowest": "#08080a",
+            "on-primary-fixed-variant": "#474647",
+            "on-secondary": "#002b75",
+            "tertiary": "#c6c6c7",
+            "tertiary-fixed": "#e2e2e2",
+            "surface-variant": "#353437",
+            "surface-container-highest": "#353437",
+            "surface-container-low": "#0e0e10",
+            "on-tertiary-container": "#787a7a",
+            "surface-bright": "#39393b",
+            "on-secondary-fixed-variant": "#003fa4",
+            "surface": "#0a0a0b",
+            "on-background": "#e4e2e4",
+            "inverse-surface": "#e4e2e4",
+            "error": "#ffb4ab",
+            "on-primary-container": "#7a797a"
+          },
+          borderRadius: {
+            DEFAULT: "0.25rem",
+            lg: "0.5rem",
+            xl: "0.75rem",
+            full: "9999px"
+          },
+          spacing: {
+            "grid-margin": "24px",
+            "section-gap-mobile": "64px",
+            "stack-sm": "12px",
+            base: "8px",
+            "section-gap-desktop": "80px",
+            "stack-md": "24px",
+            "stack-lg": "48px",
+            "grid-gutter": "24px"
+          },
+          fontFamily: {
+            "body-md": ["Hanken Grotesk"],
+            "body-lg": ["Hanken Grotesk"],
+            "label-caps": ["Geist"],
+            "headline-lg": ["Sora"],
+            "label-mono": ["Geist"],
+            "headline-xl": ["Sora"],
+            "headline-md": ["Sora"],
+            "headline-xl-mobile": ["Sora"]
+          },
+          fontSize: {
+            "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+            "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+            "label-caps": ["12px", { lineHeight: "16px", letterSpacing: "0.1em", fontWeight: "600" }],
+            "headline-lg": ["48px", { lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "700" }],
+            "label-mono": ["14px", { lineHeight: "20px", fontWeight: "500" }],
+            "headline-xl": ["72px", { lineHeight: "80px", letterSpacing: "-0.04em", fontWeight: "800" }],
+            "headline-md": ["32px", { lineHeight: "40px", letterSpacing: "-0.01em", fontWeight: "600" }],
+            "headline-xl-mobile": ["40px", { lineHeight: "44px", letterSpacing: "-0.03em", fontWeight: "800" }]
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts (consolidated) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..900&family=Hanken+Grotesk:wght@100..900&family=Geist:wght@100..900&family=Material+Symbols+Outlined:opsz,wght,FILL@24,100..700,0..1&display=swap" rel="stylesheet" />
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="font-body-md text-body-md overflow-x-hidden">
+
+  <header>
+    <nav class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-xl border-b border-white/10"
+         aria-label="Navegação principal">
+      <div class="flex justify-between items-center px-grid-margin py-4 max-w-7xl mx-auto">
+        <span class="font-headline-md text-headline-md tracking-tighter text-on-surface">VANTAGE X1</span>
+        <div class="hidden md:flex gap-stack-lg items-center">
+          <a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#features">Features</a>
+          <a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#health">Health</a>
+          <a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#specs">Specs</a>
+          <a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#reviews">Reviews</a>
+        </div>
+        <button class="bg-secondary text-on-secondary px-6 py-2 rounded-full font-bold active:scale-95 transition-transform"
+                aria-label="Comprar VANTAGE X1">
+          Buy Now
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="relative pt-32 pb-section-gap-desktop px-grid-margin min-h-screen flex flex-col items-center justify-center overflow-hidden"
+             aria-label="Apresentação do produto">
+      <div class="relative z-10 max-w-5xl text-center space-y-stack-md"
+           data-motion="fade-up">
+        <span class="font-label-caps text-label-caps text-secondary tracking-[0.3em]">PRECISÃO ABSOLUTA</span>
+        <h1 class="font-headline-xl text-headline-xl md:text-headline-xl text-on-surface max-w-4xl mx-auto leading-tight">
+          CONEXÃO TOTAL, <span class="text-secondary">PERFORMANCE</span> SEM LIMITES.
+        </h1>
+        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto opacity-80">
+          Sua saúde, produtividade e estilo em um só lugar. O smartwatch original feito para quem valoriza o autêntico.
+        </p>
+        <div class="pt-stack-lg" data-motion="fade-up">
+          <button class="bg-secondary text-on-secondary px-10 py-4 rounded-full font-bold text-lg electric-glow active:scale-95 transition-all"
+                  aria-label="Finalizar compra">
+            GARANTIR O MEU AGORA
+          </button>
+        </div>
+      </div>
+      <div class="relative z-10 mt-stack-lg w-full max-w-4xl" data-motion="fade-scale">
+        <img alt="Vantage X1 Smartwatch Showcase"
+             class="w-full h-auto drop-shadow-2xl"
+             src="assets/images/img1.png" />
+        <div class="absolute -left-4 top-1/4 glass-card rounded-xl p-stack-md hidden md:block" data-motion="fade-left">
+          <div class="flex items-center gap-base">
+            <span class="material-symbols-outlined text-secondary">battery_full_alt</span>
+            <div>
+              <p class="font-label-mono text-label-mono text-on-surface">7 Dias</p>
+              <p class="font-label-caps text-label-caps text-on-surface-variant">Bateria</p>
+            </div>
+          </div>
+        </div>
+        <div class="absolute -right-4 top-1/3 glass-card rounded-xl p-stack-md hidden md:block" data-motion="fade-right">
+          <div class="flex items-center gap-base">
+            <span class="material-symbols-outlined text-secondary">waterproof</span>
+            <div>
+              <p class="font-label-mono text-label-mono text-on-surface">5 ATM</p>
+              <p class="font-label-caps text-label-caps text-on-surface-variant">Resistente</p>
+            </div>
+          </div>
+        </div>
+        <div class="absolute left-1/4 -bottom-4 glass-card rounded-xl p-stack-md hidden md:block" data-motion="fade-up">
+          <div class="flex items-center gap-base">
+            <span class="material-symbols-outlined text-secondary">bluetooth</span>
+            <div>
+              <p class="font-label-mono text-label-mono text-on-surface">5.3</p>
+              <p class="font-label-caps text-label-caps text-on-surface-variant">Bluetooth</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Connectivity -->
+    <section class="py-section-gap-desktop bg-surface-container-lowest relative" id="features"
+             aria-label="Recursos de conectividade">
+      <div class="max-w-7xl mx-auto px-grid-margin">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-grid-gutter items-center">
+          <div data-motion="fade-left">
+            <h2 class="font-headline-lg text-headline-lg text-on-surface mb-stack-md">Sempre Conectado</h2>
+            <p class="font-body-lg text-body-lg text-on-surface-variant mb-stack-lg">
+              Nunca perca o que importa. Notificações instantâneas no seu pulso para manter você no comando do seu dia.
+            </p>
+            <div class="grid grid-cols-2 gap-stack-md" data-stagger="80">
+              <div class="glass-card p-stack-md rounded-xl flex items-center gap-base" data-motion>
+                <div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
+                  <span class="material-symbols-outlined">chat</span>
+                </div>
+                <span class="font-label-mono text-label-mono">WhatsApp</span>
+              </div>
+              <div class="glass-card p-stack-md rounded-xl flex items-center gap-base" data-motion>
+                <div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
+                  <span class="material-symbols-outlined">photo_camera</span>
+                </div>
+                <span class="font-label-mono text-label-mono">Instagram</span>
+              </div>
+              <div class="glass-card p-stack-md rounded-xl flex items-center gap-base" data-motion>
+                <div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
+                  <span class="material-symbols-outlined">call</span>
+                </div>
+                <span class="font-label-mono text-label-mono">Chamadas</span>
+              </div>
+              <div class="glass-card p-stack-md rounded-xl flex items-center gap-base" data-motion>
+                <div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
+                  <span class="material-symbols-outlined">mail</span>
+                </div>
+                <span class="font-label-mono text-label-mono">E-mails</span>
+              </div>
+            </div>
+          </div>
+          <div class="relative h-[500px] rounded-3xl overflow-hidden glass-card" data-motion="fade-right">
+            <img alt="A close-up photograph of a modern person using a high-tech smartwatch to check notifications. The lighting is moody and cinematic with deep blacks and sharp electric blue highlights reflecting off the watch face. The aesthetic is ultra-modern and professional, showing a blurred office background in a dark mode style."
+                 class="w-full h-full object-cover"
+                 src="assets/images/img2.png" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Health & Lifestyle -->
+    <section class="py-section-gap-desktop bg-background" id="health"
+             aria-label="Monitoramento de saúde">
+      <div class="max-w-7xl mx-auto px-grid-margin text-center mb-stack-lg"
+           data-motion="fade-up">
+        <h2 class="font-headline-lg text-headline-lg text-on-surface">Seu Assistente Pessoal de Bem-Estar</h2>
+        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+          Monitoramento biométrico de alta precisão 24 horas por dia.
+        </p>
+      </div>
+      <div class="max-w-7xl mx-auto px-grid-margin grid grid-cols-1 md:grid-cols-3 gap-grid-gutter"
+           data-stagger="100">
+        <div class="glass-card p-stack-lg rounded-2xl group transition-all duration-300 hover:border-secondary/40 text-center"
+             data-motion>
+          <div class="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mb-stack-md mx-auto">
+            <span class="material-symbols-outlined text-secondary text-4xl animate-heartbeat">favorite</span>
+          </div>
+          <h3 class="font-headline-md text-headline-md mb-base text-on-surface">Frequência Cardíaca</h3>
+          <p class="font-body-md text-body-md text-secondary font-bold mb-stack-sm">72 bpm</p>
+          <p class="font-body-md text-body-md text-on-surface-variant">
+            Alertas em tempo real e histórico detalhado de batimentos.
+          </p>
+        </div>
+        <div class="glass-card p-stack-lg rounded-2xl group transition-all duration-300 hover:border-secondary/40 text-center"
+             data-motion>
+          <div class="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mb-stack-md mx-auto">
+            <span class="material-symbols-outlined text-secondary text-4xl">bedtime</span>
+          </div>
+          <h3 class="font-headline-md text-headline-md mb-base text-on-surface">Ciclo do Sono</h3>
+          <p class="font-body-md text-body-md text-secondary font-bold mb-stack-sm">7h 24m de sono</p>
+          <p class="font-body-md text-body-md text-on-surface-variant">
+            Análise profunda das fases REM, leve e profundo para noites melhores.
+          </p>
+        </div>
+        <div class="glass-card p-stack-lg rounded-2xl group transition-all duration-300 hover:border-secondary/40 text-center"
+             data-motion>
+          <div class="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mb-stack-md mx-auto">
+            <span class="material-symbols-outlined text-secondary text-4xl">blood_pressure</span>
+          </div>
+          <h3 class="font-headline-md text-headline-md mb-base text-on-surface">Pressão Arterial</h3>
+          <p class="font-body-md text-body-md text-secondary font-bold mb-stack-sm">12x8 mmHg</p>
+          <p class="font-body-md text-body-md text-on-surface-variant">
+            Monitore seus níveis com tecnologia infravermelha avançada.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Specs (Bento Grid) -->
+    <section class="py-section-gap-desktop bg-surface-container-lowest" id="specs"
+             aria-label="Especificações técnicas">
+      <div class="max-w-7xl mx-auto px-grid-margin" data-motion="fade-up">
+        <h2 class="font-headline-lg text-headline-lg text-on-surface mb-stack-lg text-center">Especificações Técnicas</h2>
+        <div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-grid-gutter" data-stagger="60">
+          <div class="glass-card p-stack-md rounded-2xl md:col-span-2 flex flex-col justify-between" data-motion>
+            <span class="material-symbols-outlined text-secondary">water_drop</span>
+            <div>
+              <h3 class="font-headline-md text-headline-md mb-base">Hidratação</h3>
+              <p class="font-body-md text-body-md text-on-surface-variant">Lembretes inteligentes para beber água baseados na sua rotina.</p>
+            </div>
+          </div>
+          <div class="glass-card p-stack-md rounded-2xl flex flex-col justify-between" data-motion>
+            <span class="material-symbols-outlined text-secondary">directions_run</span>
+            <div>
+              <h3 class="font-headline-md text-headline-md">Passos</h3>
+              <p class="font-label-mono text-label-mono text-secondary mt-stack-sm">12.430 meta</p>
+            </div>
+          </div>
+          <div class="glass-card p-stack-md rounded-2xl flex flex-col justify-between" data-motion>
+            <span class="material-symbols-outlined text-secondary">local_fire_department</span>
+            <div>
+              <h3 class="font-headline-md text-headline-md">Calorias</h3>
+              <p class="font-label-mono text-label-mono text-secondary mt-stack-sm">2.180 kcal</p>
+            </div>
+          </div>
+          <div class="glass-card p-stack-md rounded-2xl flex flex-col justify-between" data-motion>
+            <span class="material-symbols-outlined text-secondary">medication</span>
+            <div>
+              <h3 class="font-headline-md text-headline-md">Medicamentos</h3>
+              <p class="font-label-mono text-label-mono text-secondary mt-stack-sm">100% adesão</p>
+            </div>
+          </div>
+          <div class="glass-card p-stack-md rounded-2xl md:col-span-2 flex items-center justify-between" data-motion>
+            <div>
+              <h3 class="font-headline-md text-headline-md mb-base">Suporte Bilíngue</h3>
+              <p class="font-body-md text-body-md text-on-surface-variant">Interface completa em Português e Inglês.</p>
+            </div>
+            <span class="material-symbols-outlined text-secondary text-5xl">language</span>
+          </div>
+          <div class="glass-card p-stack-md rounded-2xl flex flex-col justify-between" data-motion>
+            <span class="material-symbols-outlined text-secondary">history</span>
+            <div>
+              <h3 class="font-headline-md text-headline-md">Histórico</h3>
+              <p class="font-label-mono text-label-mono text-secondary mt-stack-sm">30 dias salvo</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Authenticity -->
+    <section class="py-section-gap-desktop bg-background relative overflow-hidden"
+             aria-label="Garantia de originalidade">
+      <div class="max-w-7xl mx-auto px-grid-margin">
+        <div class="flex flex-col md:flex-row items-center gap-section-gap-mobile">
+          <div class="w-full md:w-1/2" data-motion="fade-left">
+            <img alt="Authentic Detail"
+                 class="rounded-3xl shadow-2xl"
+                 src="assets/images/img3.jpg" />
+          </div>
+          <div class="w-full md:w-1/2 space-y-stack-md" data-motion="fade-right">
+            <span class="text-secondary font-label-caps text-label-caps">PRODUTO ORIGINAL</span>
+            <h2 class="font-headline-lg text-headline-lg text-on-surface">Qualidade Original Garantida</h2>
+            <p class="font-body-lg text-body-lg text-on-surface-variant">
+              O VANTAGE X1 não é apenas mais um dispositivo. É uma peça de engenharia precisa, construída com materiais premium e sensores de última geração. Garantimos a autenticidade e a performance que você espera de um líder de mercado.
+            </p>
+            <ul class="space-y-base">
+              <li class="flex items-center gap-base font-body-md text-body-md text-on-surface">
+                <span class="material-symbols-outlined text-secondary">verified</span>
+                Acabamento em Metal Aeronáutico
+              </li>
+              <li class="flex items-center gap-base font-body-md text-body-md text-on-surface">
+                <span class="material-symbols-outlined text-secondary">verified</span>
+                Sensores de Grau Médico
+              </li>
+              <li class="flex items-center gap-base font-body-md text-body-md text-on-surface">
+                <span class="material-symbols-outlined text-secondary">verified</span>
+                Pulseira Hipoalergênica
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="py-section-gap-desktop bg-surface-container-lowest overflow-hidden"
+             aria-label="Galeria de imagens do produto">
+      <div class="max-w-7xl mx-auto px-grid-margin" data-motion="fade-up">
+        <h2 class="font-headline-lg text-headline-lg text-on-surface mb-stack-lg text-center">Galeria</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-grid-gutter" data-stagger="80">
+          <div class="rounded-2xl overflow-hidden glass-card group" data-motion>
+            <img alt="Produto VANTAGE X1 em destaque"
+                 class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
+                 src="assets/images/img4.jpg" />
+            <div class="p-stack-md">
+              <p class="font-label-mono text-label-mono text-on-surface-variant">Design premium com acabamento em metal escovado.</p>
+            </div>
+          </div>
+          <div class="rounded-2xl overflow-hidden glass-card group" data-motion>
+            <img alt="VANTAGE X1 visão lateral"
+                 class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
+                 src="assets/images/img5.jpg" />
+            <div class="p-stack-md">
+              <p class="font-label-mono text-label-mono text-on-surface-variant">Estrutura ultrafina de 11mm para máximo conforto.</p>
+            </div>
+          </div>
+          <div class="rounded-2xl overflow-hidden glass-card group" data-motion>
+            <img alt="VANTAGE X1 detalhes do design"
+                 class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
+                 src="assets/images/img6.jpg" />
+            <div class="p-stack-md">
+              <p class="font-label-mono text-label-mono text-on-surface-variant">Pulseira hipoalergênica com ajuste micrométrico.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews / Depoimentos -->
+    <section class="py-section-gap-desktop bg-background" id="reviews"
+             aria-label="Depoimentos de clientes">
+      <div class="max-w-7xl mx-auto px-grid-margin" data-motion="fade-up">
+        <h2 class="font-headline-lg text-headline-lg text-on-surface mb-stack-lg text-center">O Que Dizem Nossos Clientes</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-grid-gutter" data-stagger="80">
+          <div class="glass-card p-stack-lg rounded-2xl flex flex-col justify-between" data-motion>
+            <div>
+              <div class="flex gap-0.5 text-secondary mb-stack-sm">
+                <span class="material-symbols-outlined text-lg">star</span>
+                <span class="material-symbols-outlined text-lg">star</span>
+                <span class="material-symbols-outlined text-lg">star</span>
+                <span class="material-symbols-outlined text-lg">star</span>
+                <span class="material-symbols-outlined text-lg">star</span>
+              </div>
+              <p class="font-body-md text-body-md text-on-surface-variant mb-stack-md leading-relaxed">
+                "Desde que comprei o VANTAGE X1, minha produtividade disparou. As notificações no pulso e o monitoramento de saúde são simplesmente incríveis. Recomendo para todos que buscam performance."
+              </p>
+            </div>
+            <div class="flex items-center gap-base border-t border-white/5 pt-stack-md">
+              <div class="w-10 h-10 rounded-full bg-secondary/20 flex items-center justify-center font-bold text-secondary">RM</div>
+              <div>
+                <p class="font-label-mono text-label-mono text-on-surface">Rafael M.</p>
+                <p class="font-label-caps text-label-caps text-on-surface-variant">Comprador Verificado</p>
+              </div>
+            </div>
+          </div>
+          <div class="glass-card p-stack-lg rounded-2xl flex flex-col justify-between" data-motion>
+            <div>
+              <div class="flex gap-0.5 text-secondary mb-stack-sm">
+                <span class="material-symbols-outlined text-lg">star</span>
+                <span class="material-symbols-outlined text-lg">star</span>
+                <span class="material-symbols-outlined text-lg">star</span>
+                <span class="material-symbols-outlined text-lg">star</span>
+                <span class="material-symbols-outlined text-lg">star</span>
+              </div>
+              <p class="font-body-md text-body-md text-on-surface-variant mb-stack-md leading-relaxed">
+                "A qualidade dos sensores é impressionante. O monitoramento de pressão arterial e a análise do sono são tão precisos quanto meus exames médicos. Vale cada centavo."
+              </p>
+            </div>
+            <div class="flex items-center gap-base border-t border-white/5 pt-stack-md">
+              <div class="w-10 h-10 rounded-full bg-secondary/20 flex items-center justify-center font-bold text-secondary">AL</div>
+              <div>
+                <p class="font-label-mono text-label-mono text-on-surface">Ana L.</p>
+                <p class="font-label-caps text-label-caps text-on-surface-variant">Comprador Verificado</p>
+              </div>
+            </div>
+          </div>
+          <div class="glass-card p-stack-lg rounded-2xl flex flex-col justify-between" data-motion>
+            <div>
+              <div class="flex gap-0.5 text-secondary mb-stack-sm">
+                <span class="material-symbols-outlined text-lg">star</span>
+                <span class="material-symbols-outlined text-lg">star</span>
+                <span class="material-symbols-outlined text-lg">star</span>
+                <span class="material-symbols-outlined text-lg">star</span>
+                <span class="material-symbols-outlined text-lg">star_half</span>
+              </div>
+              <p class="font-body-md text-body-md text-on-surface-variant mb-stack-md leading-relaxed">
+                "Uso no meu treino diário e o VANTAGE X1 superou todas as expectativas. A bateria dura mais de 7 dias mesmo com monitoramento contínuo. Simplesmente o melhor smartwatch que já tive."
+              </p>
+            </div>
+            <div class="flex items-center gap-base border-t border-white/5 pt-stack-md">
+              <div class="w-10 h-10 rounded-full bg-secondary/20 flex items-center justify-center font-bold text-secondary">CP</div>
+              <div>
+                <p class="font-label-mono text-label-mono text-on-surface">Carlos P.</p>
+                <p class="font-label-caps text-label-caps text-on-surface-variant">Atleta Amador</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Sticky CTA Bar -->
+  <div class="fixed bottom-0 w-full z-40 px-grid-margin pb-6" data-motion="fade-up">
+    <div class="max-w-5xl mx-auto glass-card rounded-full p-4 flex items-center justify-between shadow-2xl border-secondary/20">
+      <div class="hidden sm:block pl-6">
+        <div class="flex items-baseline gap-base">
+          <span class="font-headline-md text-secondary">R$ 187,00</span>
+          <span class="font-label-mono text-on-surface-variant line-through text-xs">R$ 289,00</span>
+        </div>
+        <p class="font-label-mono text-[10px] text-on-surface-variant uppercase tracking-widest">Oferta por tempo limitado</p>
+      </div>
+      <button class="w-full sm:w-auto bg-secondary text-on-secondary px-12 py-3 rounded-full font-bold text-lg electric-glow hover:scale-[1.02] active:scale-95 transition-all"
+              aria-label="Comprar agora">
+        Compre Agora
+      </button>
+    </div>
+  </div>
+
+  <footer class="bg-surface-container-lowest border-t border-outline-variant py-stack-lg"
+          aria-label="Rodapé">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-grid-gutter px-grid-margin max-w-7xl mx-auto">
+      <div class="space-y-stack-md">
+        <span class="font-headline-md text-headline-md text-on-surface">VANTAGE PRECISION</span>
+        <p class="font-body-md text-body-md text-on-tertiary-container max-w-sm">
+          Liderando a revolução tecnológica no seu pulso. Inovação, saúde e performance sem concessões.
+        </p>
+      </div>
+      <div class="grid grid-cols-2 gap-stack-md">
+        <div class="space-y-base">
+          <a class="block font-label-mono text-label-mono text-on-tertiary-container hover:text-secondary transition-all" href="#">Privacy Policy</a>
+          <a class="block font-label-mono text-label-mono text-on-tertiary-container hover:text-secondary transition-all" href="#">Terms of Service</a>
+        </div>
+        <div class="space-y-base">
+          <a class="block font-label-mono text-label-mono text-on-tertiary-container hover:text-secondary transition-all" href="#">Support</a>
+          <a class="block font-label-mono text-label-mono text-on-tertiary-container hover:text-secondary transition-all" href="#">Shipping Info</a>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-grid-margin mt-stack-lg border-t border-white/5 pt-stack-md text-center md:text-left">
+      <p class="font-label-mono text-label-mono text-on-tertiary-container">&copy; 2024 VANTAGE PRECISION. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Motion & Interaction Script -->
+  <script src="script.js"></script>
+</body>
+</html>
